@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wca-bp-M0O" customClass="ViewQuadraticBezierCurve">
+                                <rect key="frame" x="16" y="20" width="343" height="316"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qV-E0-GIs" customClass="ViewCubicBezierCurve">
+                                <rect key="frame" x="16" y="344" width="343" height="315"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wca-bp-M0O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BZq-0L-hHE"/>
+                            <constraint firstItem="6qV-E0-GIs" firstAttribute="top" secondItem="wca-bp-M0O" secondAttribute="bottom" constant="8" id="JtF-OD-7Fl"/>
+                            <constraint firstItem="6qV-E0-GIs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="P9m-Fg-mh5"/>
+                            <constraint firstItem="6qV-E0-GIs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gB4-hu-BHC"/>
+                            <constraint firstItem="wca-bp-M0O" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kw1-Vk-9ZV"/>
+                            <constraint firstItem="6qV-E0-GIs" firstAttribute="height" secondItem="wca-bp-M0O" secondAttribute="height" id="l1y-1L-zva"/>
+                            <constraint firstItem="6qV-E0-GIs" firstAttribute="width" secondItem="wca-bp-M0O" secondAttribute="width" id="mwX-hv-Bed"/>
+                            <constraint firstItem="wca-bp-M0O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rXF-qj-yei"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6qV-E0-GIs" secondAttribute="bottom" constant="8" id="syT-xC-Igp"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="viewCubic" destination="6qV-E0-GIs" id="o5n-p7-pbo"/>
+                        <outlet property="viewQuadratic" destination="wca-bp-M0O" id="MzW-nz-lB0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251.5" y="410.5"/>
+        </scene>
+    </scenes>
+</document>
